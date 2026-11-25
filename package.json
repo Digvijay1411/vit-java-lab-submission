@@ -1,0 +1,22 @@
+{
+  "name": "vit-java-lab-submission",
+  "version": "1.0.0",
+  "description": "Java Lab Record Submission portal for VIT Vellore",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "google-auth-library": "^9.11.0",
+    "googleapis": "^140.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+.env
+data/drive-token.json
+data/config.json
+*.log
