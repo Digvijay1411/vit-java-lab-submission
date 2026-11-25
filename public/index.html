@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Java Lab Record Submission — VIT Vellore</title>
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <h1>Java Lab Record Submission</h1>
+    <div class="sub">VIT Vellore</div>
+  </div>
+  <div class="user-box hidden" id="user-box">
+    <img id="user-pic" src="" alt="" />
+    <span id="user-name"></span>
+    <button class="btn btn-ghost btn-small" id="logout-btn">Sign out</button>
+  </div>
+</header>
+
+<main>
+  <!-- Login screen -->
+  <section id="login-screen">
+    <h2>Sign in to continue</h2>
+    <p>Use your VIT student Google account to submit weekly Java lab records.</p>
+    <div id="g_id_signin_container"></div>
+    <p class="note" id="domain-note"></p>
+    <p class="status-msg error" id="login-error"></p>
+  </section>
+
+  <!-- Student dashboard -->
+  <section id="dashboard" class="hidden">
+    <p class="small-muted">
+      Upload your lab record for each experiment before its deadline. Once a deadline
+      passes, that experiment is locked and cannot be submitted to anymore. You may
+      resubmit to replace your file any time before the deadline.
+    </p>
+    <div class="grid" id="experiments-grid"></div>
+  </section>
+</main>
+
+<script src="/js/common.js"></script>
+<script src="/js/student.js"></script>
+</body>
+</html>
