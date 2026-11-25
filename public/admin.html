@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — Java Lab Record Submission</title>
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <h1>Java Lab Record Submission — Admin</h1>
+    <div class="sub">VIT Vellore</div>
+  </div>
+  <div class="user-box hidden" id="user-box">
+    <span id="user-name"></span>
+    <a class="nav-link" href="/">Student view</a>
+    <button class="btn btn-ghost btn-small" id="logout-btn">Sign out</button>
+  </div>
+</header>
+
+<main>
+  <section id="login-screen">
+    <h2>Admin sign in</h2>
+    <p>Sign in with the admin Google account to manage deadlines and submissions.</p>
+    <div id="g_id_signin_container"></div>
+    <p class="status-msg error" id="login-error"></p>
+  </section>
+
+  <section id="dashboard" class="hidden">
+    <div class="panel">
+      <h2>Google Drive connection</h2>
+      <div class="drive-banner">
+        <span id="drive-status">Checking...</span>
+        <a class="btn btn-outline btn-small" id="connect-drive-btn" href="/auth/drive/connect">
+          Connect Google Drive
+        </a>
+      </div>
+      <p class="small-muted">
+        All submitted lab records are stored in the admin's Google Drive, inside a
+        folder named "Java", with one subfolder per experiment. Connect this once.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>Experiments &amp; deadlines</h2>
+      <p class="small-muted">
+        Only the admin can set or change these deadlines. Students cannot edit them.
+      </p>
+      <div id="experiments-admin-list"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Submissions</h2>
+      <div id="submissions-table"></div>
+    </div>
+  </section>
+</main>
+
+<script src="/js/common.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>
